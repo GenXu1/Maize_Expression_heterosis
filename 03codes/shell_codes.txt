@@ -1,0 +1,46 @@
+1. An example of eQTL analysis
+#create genetic relationship matrix (GRM)
+gcta --bfile 203inbreds.AGPV4.maf005 --make-grm --out 203inbreds.AGPV4.maf005  
+
+#get PCA
+gcta --grm 203inbreds.AGPV4.maf005 --pca 20 --out 203inbreds.AGPV4.maf005.pca
+
+#run GWAS using GCTA
+gcta --bfile 203inbreds.AGPV4.maf005 --grm 203inbreds.AGPV4.maf005 --mlma --pheno RNA.203Inbreds.log_transform_GCTA.txt --qcovar 203inbs_PCA_PEER.txt --thread-num 1 --mpheno 2 --maf 0.05 --out Inb_trait
+
+2. SNP-based  heritability
+# Calculating the additive GRM from all the autosomal SNPs
+gcta --bfile 599hybrids.AGPV4.maf005.miss01 --autosome --make-grm --thread-num 4 --out 599hybrids.AGPV4.maf005.miss01_add
+
+# Calculating the dominance GRM from all the autosomal SNPs
+gcta --bfile 599hybrids.AGPV4.maf005.miss01 --autosome --make-grm-d --thread-num 4 --out 599hybrids.AGPV4.maf005.miss01_domi
+
+# Estimating additive and dominance genetic variance by fitting an AD model
+gcta --reml --mgrm add_domi_grm.txt --pheno ALL_Phenotype_for_GCTA.txt --mpheno 2 --thread-num 4 --out trait_add_domi
+
+h2=(Va+Vd)/Vp
+Note: format of add_domi_grm.txt (no headline; each line represents the prefix of a GRM file)
+599hybrids.AGPV4.maf005.miss01_add
+599hybrids.AGPV4.maf005.miss01_domi
+
+3. DAP-seq data analysis
+#remove adaptors using fastp
+fastp -i sample1_L002_R1_001.fastq.gz -I sample1_L002_R2_001.fastq.gz -o sample1_clean_R1.fastq.gz -O sample1_clean_R2.fastq.gz -c --thread=4 -Q
+
+#Mapping
+module load bowtie/2.2 samtools
+bowtie2 -p 8 -q -x B73_V4/maize-genome-V4 -1 sample1_L002_R1_001.fastq.gz -2 sample1_L002_R2_001.fastq.gz --rg-id sample1 --rg "PL:ILLUMINA" --rg "SM:sample1" -S sample1_bowtie.sam
+samtools view -bS -q 30 -h sample1_bowtie.sam -o sample1.bam
+samtools sort -m 30G sample1.bam -o sample1.sorted\.bam
+module load picard/2.18
+picard -Xmx60g MarkDuplicates I=sample1.sorted.bam O=sample1.sorted.picard.bam M=sample1.sorted.picard.matrics AS=true 
+
+#call peak
+module load macs2/2.1
+macs2 callpeak -t input1.sorted.picard.bam \
+input2.sorted.picard.bam \
+-c sample1.rep1.sorted.picard.bam sample1.rep2.sorted.picard.bam \
+-f BAMPE -g 2.3e+9 -n ZmR1 \
+--keep-dup 1 \
+--nomodel -q 0.01 \
+--outdir macs2Callpeak
