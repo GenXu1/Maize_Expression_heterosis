@@ -1,7 +1,7 @@
 library(data.table)
 library(Ropt)
-ch=fread("chr_length_v4.txt", header=T,data.table=F)
-g=fread("maize-genome-V4.gene.txt", header=T,data.table=F)
+ch=fread("inputdata/fig4/chr_length_v4.txt", header=T,data.table=F)
+g=fread("inputdata/fig4/maize-genome-V4.gene.txt", header=T,data.table=F)
 g1=NULL
 for (k in 1:10)
 {
@@ -15,16 +15,16 @@ g2=g1[g1[,1]%in%c("Zm00001d025281","Zm00001d039267","Zm00001d048623"),]
 N=c(174,521,96)##number of target gene
 g3=data.frame(g2,N)
 
-ch=fread("chr_length_v4.txt", header=T,data.table=F)
-pos=fread("Pos_MPH_gene_enrichment_in_eQTL_hotspot_yunhui.txt", header=T,data.table=F)
+ch=fread("inputdata/fig4/chr_length_v4.txt", header=T,data.table=F)
+pos=fread("inputdata/fig4/Pos_MPH_gene_enrichment_in_eQTL_hotspot.txt", header=T,data.table=F)
 pos1=pos[pos[,11]<=0.01,]
 mk0=qq("{pos1[,1]}-{pos1[,2]}")
 
-neg=fread("Neg_MPH_gene_enrichment_in_eQTL_hotspot.txt", header=T,data.table=F)
+neg=fread("inputdata/fig4/Neg_MPH_gene_enrichment_in_eQTL_hotspot.txt", header=T,data.table=F)
 neg1=neg[neg[,11]<=0.01,]
 mk1=qq("{neg1[,1]}-{neg1[,2]}")
 
-d=fread("RNA_MPH_GWAS.SIG.Loci.eQTL_number.3sig.hotspot.eQTL.grp100_genes.merged.txt", header=T,data.table=F)
+d=fread("inputdata/fig4/RNA_MPH_GWAS.SIG.Loci.eQTL_number.3sig.hotspot.eQTL.grp100_genes.merged.txt", header=T,data.table=F)
 mk=qq("{d[,1]}-{d[,2]}")
 d=data.frame(d,mk)
 pos=(d[,3]+d[,2])/2
@@ -61,17 +61,17 @@ abline(v=c(ch[,3]/1e6,2100),col="gray")
  dev.off()
 
 ###plot case
-d0=fread("MPH_ratio_summary_with_p3_Yunhui.txt", header=T,data.table=F)[,c(1,2,5,7)]
-g23=fread("eQTL_hotspot_Zm00001d048623_target_genes.txt", header=F,data.table=F)
-g67=fread("eQTL_hotspot_Zm00001d039267_target_genes.txt", header=F,data.table=F)
-g81=fread("eQTL_hotspot_Zm00001d025281_target_genes.txt", header=F,data.table=F)
+d0=fread("inputdata/fig4/MPH_gene_summary_Gen_06_19_2025.txt", header=T,data.table=F)[,c(1,2,5,7)]
+g23=fread("inputdata/fig4/eQTL_hotspot_Zm00001d048623_target_genes.txt", header=F,data.table=F)
+g67=fread("inputdata/fig4/eQTL_hotspot_Zm00001d039267_target_genes.txt", header=F,data.table=F)
+g81=fread("inputdata/fig4/eQTL_hotspot_Zm00001d025281_target_genes.txt", header=F,data.table=F)
 colnames(g23)=colnames(g67)=colnames(g81)="Gene"
 g23=merge(g23,d0,by="Gene")
 g67=merge(g67,d0,by="Gene")
 g81=merge(g81,d0,by="Gene")
 
-ch=fread("chr_length_v4.txt", header=T,data.table=F)
-g=fread("maize-genome-V4.gene.txt", header=T,data.table=F)
+ch=fread("inputdata/fig4/chr_length_v4.txt", header=T,data.table=F)
+g=fread("inputdata/fig4/maize-genome-V4.gene.txt", header=T,data.table=F)
 g1=NULL
 for (k in 1:10)
 {
@@ -85,10 +85,10 @@ g23=merge(g23,g1,by="Gene")
 g67=merge(g67,g1,by="Gene")
 g81=merge(g81,g1,by="Gene")
 
-ch=fread("chr_length_v4.txt", header=T,data.table=F)
-gp81=fread("Zm00001d025281_peaks.narrowPeak.genes.txt", header=F,data.table=F)
-gp67=fread("Zm00001d039267_peaks.narrowPeak.genes.txt", header=F,data.table=F)
-gp23=fread("Zm00001d048623_peaks.narrowPeak.genes.txt", header=F,data.table=F)
+ch=fread("inputdata/fig4/chr_length_v4.txt", header=T,data.table=F)
+gp81=fread("inputdata/fig4/Zm00001d025281_peaks.narrowPeak.genes.txt", header=F,data.table=F)
+gp67=fread("inputdata/fig4/Zm00001d039267_peaks.narrowPeak.genes.txt", header=F,data.table=F)
+gp23=fread("inputdata/fig4/Zm00001d048623_peaks.narrowPeak.genes.txt", header=F,data.table=F)
 gp81=gp81[gp81[,11]>0,]
 gp67=gp67[gp67[,11]>0,]
 gp23=gp23[gp23[,11]>0,]

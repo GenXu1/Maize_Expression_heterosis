@@ -1,13 +1,9 @@
-library(Ropt)
 library(data.table)
 library(vioplot)
-d1=fread("Seedling_R1_heterosis.txt", header=T,data.table=F)
+d1=fread("inputdata/fig6/Seedling_R1_heterosis.txt", header=T,data.table=F)
 d1[,3:6]=apply(d1[,3:6],2,function(x){x*100})
-d2=d1[d1[,1]==1 | d1[,1]==2,]
-unique(d2[,2])
-
 #######OE
-d2=d1[d1[,1]==5 | d1[,1]==6,]
+d2=d1[d1[,1]==1 | d1[,1]==2,]
 d3=d2[d2[,2]=="J92/JING724",]
 d4=d2[d2[,2]=="J92/OE1",]
 d5=d2[d2[,2]=="J92/OE2",]
@@ -40,7 +36,7 @@ points(rep(jitter(rep(15,nrow(d5)),factor =0.3)),d5[,6],pch=16,cex=0.5,col=adjus
 points(rep(jitter(rep(16,nrow(d6)),factor =0.3)),d6[,6],pch=16,cex=0.5,col=adjustcolor("darkred", alpha.f = 0.5))
 
 ###plot adult traits
-d=fread("adult_traits/Adult_R1_heterosis.txt", header=T,data.table=F)
+d=fread("inputdata/fig6/Adult_R1_heterosis.txt", header=T,data.table=F)
 
 tra=c("PH","TSS","MSS","BSS")
 d=d[d[,1]%in%tra,]

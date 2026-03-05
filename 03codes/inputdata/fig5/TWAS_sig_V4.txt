@@ -1,0 +1,80 @@
+Heterosis	Gene	Chr	Pos	P-value	Effect	Traits	Anno	TF	Exp_hyb	Exp_inb	References
+Hybrid	Zm00001d032822	1	239273172	2.48E-08	-1.209178635	FW/pSL/SL	NA		27.67241014	14.9772536	 Single-cell transcriptomes reveal spatiotemporal heat stress response in maize roots. Nat Commun.
+Hybrid	Zm00001d027395	1	4341041	9.47E-07	-1.344322735	SL/TL	NAC domain containing protein 28	Y	0.546902448	0.546762506	Biofortification of iron content by regulating a NAC transcription factor in maize Science. 382:1159-1165.
+Hybrid	Zm00001d015201	5	78984402	7.93E-07	-0.046417814	FW	Protein NLP6		0.999521445	3.238581567	Deciphering Nitrogen Stress Responses in Maize Rhizospheres: Comparative Transcriptomics of Monocropping and Intercropping Systems Agronomy. 14:2554.
+Hybrid	Zm00001d049883	4	50288422	8.32E-07	-1.683758837	pSL/SL	Protein PROTON GRADIENT REGULATION 5 chloroplastic		42.80177695	39.50097059	Embracing native diversity to enhance the maximum quantum efficiency of photosystem II in maize. Plant Physiol. :doi: 10.1093/plphys/kiae670. )
+Hybrid	Zm00001d043244	3	193000729	7.55E-08	-0.031073451	FW	Indole-3-acetic acid-amido synthetase GH3.6		7.488679167	6.597077637	Fulvic acid alleviates the stress of low nitrogen on maize by promoting root development and nitrogen metabolism. Physiol Plant. 176:e14249.
+Hybrid	Zm00001d027924	1	17775779	7.93E-07	0.03041622	FW	NA		4.009045104	5.160985454	Genetic variations in ZmEREB179 are associated with waterlogging tolerance in maize J Genet Genomics. :doi: 10.1016/j.jgg.2024.04.005.
+Hybrid	Zm00001d050201	4	73396073	2.11E-07	-1.343060551	pSL/SL	Probable xyloglucan endotransglucosylase/hydrolase protein 21		4.369197221	2.182128668	Genome-wide identification and characterization of xyloglucan endotransglucosylase/hydrolase gene family in maize (Zea mays L.) and the function of ZmXTH30 in response to drought stress Environ Exp Bot. :doi: 10.1016/j.envexpbot.2024.105744. ] Genome browser
+Hybrid	Zm00001d041576	3	127808680	9.77E-09	-0.681370183	FW/pSL/SL	Transcription factor MYB48	Y	62.34963001	47.75287998	Genome-wide identification and functional roles relating to anthocyanin biosynthesis analysis in maize. BMC Plant Biology. 25:57.
+Hybrid	Zm00001d042683	3	176794763	7.49E-07	-0.039022667	FW	POT family protein		3.277916419	1.753808999	Genome-wide identification of nitrate transporter 1/peptide transporter family (NPF) induced by arbuscular mycorrhiza in the maize genome Physiol Mol Biol Plants. :doi: 10.1007/s12298-024-01464-3.
+Hybrid	Zm00001d038717	6	163280343	5.88E-07	2.094985729	RL/TL	Seed specific protein Bn15D17A		12.25331671	15.28716982	Genomic basis determining root system architecture in maize. Theor Appl Genet. 137:102.
+Hybrid	Zm00001d018142	5	215341246	5.16E-09	0.036607864	FW	MADS-box protein SVP		9.399787041	6.76310961	GWAS and Transcriptome Analysis Reveal Key Genes Affecting Root Growth under Low Nitrogen Supply in Maize Genes. 13:1632.
+Hybrid	Zm00001d040837	3	69485812	1.68E-07	-0.045215284	FW	Glutaredoxin-C13		9.293001385	20.32171889	Identification of maize CC-type glutaredoxins that are associated with response to drought stress
+Hybrid	Zm00001d003859	2	63412887	6.22E-07	0.81506239	pSL/SL	Potassium transporter 5		5.403243322	1.998576053	Integrated Transcriptomic and Metabolomic Analysis of Exogenous NAA Effects on Maize Seedling Root Systems under Potassium Deficiency Int J Mol Sci. 25:3366.
+Hybrid	Zm00001d003309	2	39693111	4.66E-12	-1.493078243	ADW/FW/pSL/SL/TL	Copper amine oxidase family protein		72.1461318	83.00548473	"Integrating physiological, metabolome and transcriptome revealed the response of maize seeds to combined cold and high soil moisture stresses. Physiol Plant. 177:e70096. )"
+Hybrid	Zm00001d052180	4	181857308	1.63E-10	0.020895452	ADW/FW	"tu1;tunicate1: dominant Tu1 ears develop long glumes; tassels develop large, MADs"	Y	19.83597622	15.09046213	MADS-box encoding gene Tunicate1 positively controls maize yield by increasing leaf number above the ear Nat Commun. 15:9799.
+Hybrid	Zm00001d017557	5	199518262	8.77E-07	-0.528297046	FW/pSL	Amino acid transporter ANTL2		78.48041325	99.213602	Nitrogen fixation and mucilage production on maize aerial roots is controlled by aerial root development and border cell functions Frontiers in Plant Science. 13:977056.
+Hybrid	Zm00001d011299	8	146128641	3.26E-07	-1.136426077	pSL/SL	sweet6b;sugars will eventually be exported transporter6b:		1.916212507	3.046949359	"Regulation of maize root growth by local phosphorus availability, sucrose metabolism, and partitioning. Ann Bot. :doi: 10.1093/aob/mcae169."
+Hybrid	Zm00001d051529	4	161594500	1.84E-06	-1.345175109	SL	Putative AMP-dependent synthetase and ligase superfamily protein		8.781504192	6.101574529	Spatial accumulation of lignin monomers and cellulose underlying stalk strength in maize Plant Physiol Biochem. :doi: 10.1016/j.plaphy.2024.108918.
+Hybrid	Zm00001d037774	6	137231049	2.27E-07	1.33408207	pSL/SL	Auxin-responsive protein IAA27		171.8495689	144.2796589	"The difference of organophosphate esters (OPEs) uptake, translocation and accumulation mechanism between four varieties in Poaceae J Plant Physiol. :doi: 10.1016/j.jplph.2024.154418."
+MPH	Zm00001d001820	2	1439871	9.35E-08	0.113723508	FW/pSL/SL	pcr1;protochlorophyllide reductase1		340.6657793	321.0494878	The light and hypoxia induced gene ZmPORB1 determines tocopherol content in the maize kernel Sci China Life Sci. :doi: 10.1007/s11427-023-2489-2.)
+Hybrid	Zm00001d030678	1	152667851	2.71E-10	-0.867046629	ADW/FW/pSL/SL/TL	Transcription factor MYB48	Y	56.14787624	44.37379828	The Transcription Factor ZmMYB56 Regulates High CO2-Induced Stomatal Closure in Maize Seedlings by Regulating ZmHLT1 Expression. Plant Cell Environ. :doi: 10.1111/pce.15137. )
+Hybrid	Zm00001d032316	1	221942141	9.26E-08	0.932797058	pSL/SL	Homeobox-leucine zipper protein HAT5		28.98391797	26.7129019	"Zmhdz9, an HD-Zip transcription factor, promotes drought stress resistance in maize by modulating ABA and lignin accumulation Int J Biol Macromol. :doi: 10.1016/j.ijbiomac.2023.128849. )"
+MPH	Zm00001d027395	1	4341041	1.37E-07	-0.090178832	pSL/SL/TL	NAC domain containing protein 28	Y	0.546902448	0.546762506	0
+MPH	Zm00001d027613	1	9015345	7.07E-07	-0.141836943	FW/pSL/SL	Tetratricopeptide repeat (TPR)-like superfamily protein		26.5199397	21.18128338	0
+Hybrid	Zm00001d029983	1	97416254	8.46E-07	-1.34667317	pSL/SL	Beta-amylase 3 chloroplastic		133.6358383	158.6036351	0
+MPH	Zm00001d030305	1	121211811	9.18E-07	0.09255784	pSL/SL	Proline-rich protein 2		5.356794037	3.445264914	0
+MPH	Zm00001d030678	1	152667851	9.43E-09	-0.13566147	ADW/FW/pSL/SL	Transcription factor MYB48	Y	56.14787624	44.37379828	0
+Hybrid	Zm00001d034338	1	290204343	4.11E-07	-1.006905066	pSL	Deoxyribodipyrimidine photolyase		12.87976616	13.64332898	0
+MPH	Zm00001d034931	1	306058017	1.42E-06	0.127541172	SL	COP1-interacting protein-related		13.86675128	11.02893359	0
+Hybrid	Zm00001d002721	2	20455119	1.13E-06	0.039885156	FW	extensin-like protein		212.3665291	141.2979846	0
+MPH	Zm00001d003309	2	39693111	1.82E-08	-0.196891272	FW/pSL/SL	Copper amine oxidase family protein		72.1461318	83.00548473	0
+Hybrid	Zm00001d003823	2	60927051	1.43E-07	-0.641976902	FW/pSL/SL	Cytochrome P450 77A4		5.54353399	4.694247984	0
+Hybrid	Zm00001d040158	3	29625662	1.64E-06	-1.259956458	pSL	Exonuclease family protein		5.414563854	1.908190125	0
+MPH	Zm00001d040837	3	69485812	1.60E-06	-0.174025748	FW	"Glutaredoxin-C13, electron carrier activity"		9.293001385	20.32171889	0
+MPH	Zm00001d041576	3	127808680	7.61E-08	-0.1220486	FW/pSL	Transcription factor MYB48	Y	62.34963001	47.75287998	0
+Hybrid	Zm00001d042840	3	181638640	1.37E-06	-1.210628894	pSL	Sedoheptulose-17-bisphosphatase chloroplastic		261.1815366	230.4916495	0
+MPH	Zm00001d044110	3	219541267	2.72E-07	0.125048685	RL/TL	Polygalacturonase		1.559335438	1.382604762	0
+Hybrid	Zm00001d048737	4	4611295	4.91E-07	-1.017361968	pSL	NA		8.094439051	7.080656575	0
+MPH	Zm00001d048958	4	10715010	5.34E-08	0.102372425	pSL/SL	Leucine-rich repeat protein kinase family protein		4.126995106	3.562060902	0
+Hybrid	Zm00001d049336	4	27048627	1.39E-06	-1.864108859	pSL	Xyloglucan glycosyltransferase 4		6.683681713	2.9757462	0
+Hybrid	Zm00001d050324	4	81458133	4.08E-07	1.065280834	pSL	NA		40.20246015	38.8903921	0
+Hybrid	Zm00001d050404	4	86263641	1.84E-07	-0.891033669	pSL/SL	G2-like transcription factor	Y	8.350604769	7.922355354	0
+MPH	Zm00001d052180	4	181857308	2.74E-07	0.139484299	FW	"tu1;tunicate1: dominant Tu1 ears develop long glumes; tassels develop large, MADs"	Y	19.83597622	15.09046213	0
+Hybrid	Zm00001d053068	4	212048116	2.50E-07	-1.23902694	pSL/SL	NA		13.93407603	21.47806806	0
+MPH	Zm00001d053068	4	212048116	1.80E-06	-0.127923989	pSL	NA		13.93407603	21.47806806	0
+MPH	Zm00001d053099	4	213559077	9.88E-09	0.114732839	FW/pSL/SL	hydrolase activity		3.629471974	2.707250502	0
+MPH	Zm00001d013861	5	23154539	1.78E-06	0.087027973	SL	RNA-binding CRS1 / YhbY (CRM) domain protein		11.75595708	11.36368749	0
+MPH	Zm00001d014852	5	65588997	7.85E-07	0.115782558	FW	Ser/Thr-rich protein T10 in DGCR region		26.94419135	26.79360173	0
+Hybrid	Zm00001d014947	5	69452584	2.47E-07	0.78705641	FW/pSL/SL	Beta-fructofuranosidase 1%3B Invertase		78.87104684	77.97626377	0
+MPH	Zm00001d017298	5	192055233	7.29E-07	-0.152787816	FW	DUF3755 family protein		8.417821127	7.5757776	0
+Hybrid	Zm00001d017441	5	195906689	1.81E-06	-1.17803806	pSL	Cyclin-U4-2		39.66616862	32.63342473	0
+Hybrid	Zm00001d017615	5	201775528	1.01E-08	0.667809677	FW/pSL/SL	RING/U-box superfamily protein		10.2744962	10.60880012	0
+MPH	Zm00001d017615	5	201775528	1.50E-06	0.089847274	pSL	RING/U-box superfamily protein		10.2744962	10.60880012	0
+Hybrid	Zm00001d017622	5	201997949	7.79E-07	-1.591098244	pSL	OSJNBa0088A01.13 protein;  protein		68.78806034	123.8131427	0
+Hybrid	Zm00001d018157	5	215693591	9.99E-07	-1.094423055	pSL	"lhcb4;light harvesting complex a/b protein4: leaf cDNA csu227, single site"		138.4092534	130.1093167	0
+Hybrid	Zm00001d036072	6	70419011	7.52E-07	-0.030409296	FW	Zinc finger (C3HC4-type RING finger) family protein		1.558381615	1.242374339	0
+Hybrid	Zm00001d038527	6	159314690	8.69E-07	-0.812684057	pSL	Putative MYB DNA-binding domain superfamily protein		13.79398954	11.66726567	0
+MPH	Zm00001d038717	6	163280343	2.19E-07	0.184589145	FW	Seed specific protein Bn15D17A		12.25331671	15.28716982	0
+MPH	Zm00001d038775	6	164201228	1.09E-06	0.14949515	FW	ATP-dependent 6-phosphofructokinase 3		21.6434459	22.8343879	0
+MPH	Zm00001d038843	6	165655159	1.70E-06	-0.100626323	SL	Putative WRKY DNA-binding domain superfamily protein	Y	39.44759613	50.13544067	0
+Hybrid	Zm00001d018936	7	9658900	2.83E-08	-1.06387113	FW/pSL/SL/TL	Probable ribose-5-phosphate isomerase 3 chloroplastic		71.96989415	67.35157979	0
+Hybrid	Zm00001d019672	7	49652839	1.38E-06	-0.037833389	FW	Type I inositol polyphosphate 5-phosphatase 2		13.7728863	9.086868044	0
+Hybrid	Zm00001d020497	7	119140649	8.64E-07	0.042417816	FW	CBL-interacting serine/threonine-protein kinase 6		27.27953941	19.63890688	0
+Hybrid	Zm00001d021672	7	159690992	9.44E-07	-0.446159893	FW/pSL	Pyruvate phosphate dikinase regulatory protein 2		21.07294184	19.80175032	0
+Hybrid	Zm00001d022450	7	177955827	3.73E-08	0.66507362	ADW/FW/pSL/SL	CBL-interacting serine/threonine-protein kinase 10		178.1288443	157.2729899	0
+MPH	Zm00001d008651	8	15983269	4.89E-07	0.122502829	FW	Pyruvate decarboxylase isozyme 2		7.251359337	9.939495788	0
+Hybrid	Zm00001d008925	8	25511398	2.53E-09	-0.025228834	ADW/FW	GDSL esterase/lipase		60.01449834	64.10652231	0
+MPH	Zm00001d008925	8	25511398	1.06E-07	-0.181851758	FW	GDSL esterase/lipase		60.01449834	64.10652231	0
+Hybrid	Zm00001d010535	8	119686699	1.71E-06	-0.047138424	FW	Riboflavin biosynthesis protein ribAB		21.61382122	23.50041593	0
+Hybrid	Zm00001d011461	8	151002173	8.81E-07	0.935618937	pSL/SL	NA		371.0061457	258.5495574	0
+Hybrid	Zm00001d044806	9	2940677	1.20E-06	-0.889854953	pSL/SL	Serine/threonine-protein kinase WNK (With No Lysine)-related		5.91124303	6.232476034	0
+Hybrid	Zm00001d046134	9	65715514	2.87E-07	-0.048208542	FW	Glycosyl hydrolase superfamily protein		4.082404128	8.416720186	0
+Hybrid	Zm00001d046157	9	67966186	6.21E-08	1.511557042	pSL/SL/TL	NA		25.11966287	20.24049333	0
+Hybrid	Zm00001d047203	9	121850174	4.92E-07	0.048637086	FW	NA		17.22876136	15.67210935	0
+MPH	Zm00001d047538	9	134287311	3.25E-07	-0.142364778	FW	"Endo-1%2C4-beta-glucanase, carbohydrate metabolic process"		2.562032718	2.587771261	0
+Hybrid	Zm00001d024148	10	49667977	4.20E-07	-1.10067598	pSL	Photosynthetic NDH subunit of subcomplex B 1 chloroplastic		285.7503552	264.9200679	0
+Hybrid	Zm00001d025988	10	135344276	1.64E-06	0.974302065	pSL	GATA transcription factor 26		8.580435168	7.995637845	0
+Hybrid	Zm00001d026147	10	139780968	8.94E-08	-0.049403751	FW	"P;plant color component at R1: anthocyanin pigmentation in seedling leaf tip, coleoptile, anthers"		9.00519318	5.231167496	0
+MPH	Zm00001d026147	10	139780968	1.53E-09	-0.17193301	FW/pSL/SL/TL	plant color component at R1	Y	9.00519318	5.231167496	0

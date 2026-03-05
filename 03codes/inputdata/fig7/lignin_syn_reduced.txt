@@ -1,0 +1,73 @@
+Gene ID_V4	Gene ID_V5	Gene family	Gene name	Description
+Zm00001d002346	Zm00001eb071040	CAD	ZmCAD1	Cinnamyl alcohol dehydrogenase1
+Zm00001d003015	Zm00001eb077220	PAL	ZmPAL6	Phenylalanine ammonia-lyase 6
+Zm00001d003016	Zm00001eb077230	PAL	ZmPAL2	Phenylalanine ammonia lyase2
+Zm00001d003129	Zm00001eb078220	HCT	ZmHCT5	Hydroxycinnamoyltransferase5
+Zm00001d003702	Zm00001eb083110	4CL	ZmACSN2	4-coumarate--CoA ligase 
+Zm00001d004689	Zm00001eb090830	NA	hsbp1	NA
+Zm00001d005822	Zm00001eb100210	F5H	ZmCYP12	Cytochrome P450 12
+Zm00001d005998	Zm00001eb101680	CCoAOMT	CCoAOMT1c	Caffeoyl-CoA O-methyltransferase 1
+Zm00001d007918	Zm00001eb117370	F5H	ZmCYP20	Trimethyltridecatetraene synthase (Cytochrome P-450 20) (Cytochrome P450 92C6)
+Zm00001d011438	Zm00001eb359030	CCR	ZmA4	Dihydroflavonol-4-reductase
+Zm00001d011979	Zm00001eb364060	HCT	HHT1	DEK domain-containing chromatin associated protein
+Zm00001d012274	Zm00001eb366700	HCT	ZmHCT10	Hydroxycinnamoyltransferase10
+Zm00001d012408	Zm00001eb367900	NA	lac21	NA
+Zm00001d012510	Zm00001eb368900	C3H&C4H	ZmC4H	Putative cytochrome P450 superfamily protein
+Zm00001d012982	Zm00001eb211970	CCR	ZmGPM111Ê	NAD(P)-binding Rossmann-fold superfamily protein
+Zm00001d013753	Zm00001eb219290	C3H	ZmCYP34	Cytochrome P450 CYP79A33
+Zm00001d013818	Zm00001eb219870	C3H	ZmCYP36	Tryptophan N-monooxygenase 2
+Zm00001d015459	Zm00001eb233720	4CL	ZmBM5	4-coumarate--CoA ligase 
+Zm00001d015513	Zm00001eb234090	CCR	ZmCYP90D3	Dihydroflavonol-4-reductase
+Zm00001d015618	Zm00001eb234730	CAD	ZmBM1	Cinnamyl alcohol dehydrogenase (Cinnamyl alcohol dehydrogenase 2) (Putative cinnamyl alcohol dehydrogenase)
+Zm00001d015956	Zm00001eb237050	CCR	ZmGPM720	NAD(P)-binding Rossmann-fold superfamily protein
+Zm00001d016471	Zm00001eb240910	C3H&C4H	CYP73A5	Trans-cinnamate 4-monooxygenase
+Zm00001d017186	Zm00001eb246860	HCT	ZmHCT6	Shikimate O-hydroxycinnamoyltransferase
+Zm00001d017275	Zm00001eb247630	PAL	ZmPAL9	Phenylalanine ammonia-lyase 9
+Zm00001d017276	Zm00001eb247650	PAL	ZmPAL8	Phenylalanine ammonia-lyase 8
+Zm00001d017279	Zm00001eb247660	PAL	ZmPAL7	Phenylalanine ammonia-lyase 7
+Zm00001d019669	Zm00001eb307060	CCR	ZmCNCR2	Cinnamoyl CoA reductase2
+Zm00001d020957	Zm00001eb316910	CCR	ZmGPM248	NAD(P)-binding Rossmann-fold superfamily protein
+Zm00001d020970	Zm00001eb317040	CCR	ZmDFR1	Dihydroflavonoid reductase1 (Tetraketide alpha-pyrone reductase 1)
+Zm00001d024231	Zm00001eb413110	CCR	ZmCL42025_1Ê	Nuclear transcription factor Y subunit C-2
+Zm00001d024314	Zm00001eb413850	CAD	ZmCL4921_1	Putative cinnamyl-alcohol dehydrogenase family protein
+Zm00001d024596	Zm00001eb416160	CCoAOMT	ZmOMT3	Caffeoyl CoA O-methyltransferase3 (Caffeoyl-CoA O-methyltransferase 1)
+Zm00001d026370	Zm00001eb431510	CCR	ZmANDR2Ê	Leucoanthocyanidin reductase
+Zm00001d027519	Zm00001eb002570	4CL	4CL3	4-coumarate--CoA ligase 
+Zm00001d027711	Zm00001eb004210	4CL	4CL4	4-coumarate--CoA ligase 
+Zm00001d030372	Zm00001eb026930	F5H	F3'5'H	Cytochrome P450 family 76 subfamily C polypeptide 7
+Zm00001d030494	Zm00001eb027660	HCT	ZmNPI598	Omega-hydroxypalmitate O-feruloyl transferase
+Zm00001d032103	Zm00001eb040790	4CL	Zm4CL1	4-coumarate--CoA ligase 
+Zm00001d032148	Zm00001eb041100	HCT	ZmHCT9	Anthranilate N-benzoyltransferase protein 1 (Hydroxycinnamoyltransferase9)
+Zm00001d032152	Zm00001eb041120	CCR	ZmCNCR1	Cinnamoyl CoA reductase1
+Zm00001d032468	Zm00001eb043700	NA	fah1	NA
+Zm00001d033055	Zm00001eb048810	4CL	4CL2	4-coumarate--CoA ligase 
+Zm00001d033286	Zm00001eb050970	PAL	ZmPAL11	Phenylalanine ammonia-lyase 11
+Zm00001d034118	Zm00001eb058180	C3H	ZmCYP35	Tryptophan N-monooxygenase 2
+Zm00001d036293	Zm00001eb271480	CCoAOMT	ZmOMT1	Caffeoyl-CoA 3-O-methyltransferase 1 (Caffeoyl-CoA O-methyltransferase1)
+Zm00001d037073	Zm00001eb278280	HCT	ZmHCT3	Hydroxycinnamoyltransferase3
+Zm00001d037849	Zm00001eb285030	C3H&C4H	C4H1	Trans-cinnamate 4-monooxygenase
+Zm00001d038371	Zm00001eb289630	NA	lac2	NA
+Zm00001d038555	Zm00001eb291460	C3H&C4H	ZmCYP46	Cytochrome P450 98A3
+Zm00001d039274	Zm00001eb119050	4CL	ZmACSN3	RING-type E3 ubiquitin transferase /4-coumarate--CoA ligase
+Zm00001d039840	Zm00001eb124190	HCT	ZmHCT7	Hydroxycinnamoyltransferase7
+Zm00001d039956	Zm00001eb125080	HCT	ZmHCT8	Hydroxycinnamoyltransferase8
+Zm00001d042723	Zm00001eb146710	HCT	ZmASFT2	Omega-hydroxypalmitate O-feruloyl transferase
+Zm00001d042901	Zm00001eb148240	NA	lac5	NA
+Zm00001d042906	Zm00001eb148280	NA	lac4	NA
+Zm00001d044122	Zm00001eb159020	CCR	ZmA1	Dihydroflavonol-4-reductase (NADPH-dependent reductase)
+Zm00001d045043	Zm00001eb374100	CAD	ZmGPM42A	Mannitol dehydrogenase (Putative cinnamyl alcohol dehydrogenase 1)
+Zm00001d045206	#N/A	NA	omt2 	NA
+Zm00001d046334	Zm00001eb385020	C3H	ZmCYP9	Cytochrome P450 9
+Zm00001d046697	Zm00001eb387920	CCR	ZmAY103770	Dihydroflavonol-4-reductase
+Zm00001d046758	Zm00001eb388290	F5H	ZmCYP40	Putative cytochrome P450 superfamily protein
+Zm00001d048087	Zm00001eb400190	COMT	ZmFOMT4	Flavone 3'-O-methyltransferase 1
+Zm00001d049541	Zm00001eb172420	COMT	ZmBM3	Caffeic acid 3-O-methyltransferase (CAOMT) (COMT) (Flavone 3'-O-methyltransferase 1) (ZmOMT1)
+Zm00001d051161	Zm00001eb185240	PAL	ZmPAL3	Phenylalanine ammonia lyase3
+Zm00001d051164	Zm00001eb185250	PAL	ZmPAL5	Phenylalanine ammonia lyase5
+Zm00001d051166	Zm00001eb185260	PAL	ZmPAL4	Phenylalanine ammonia-lyase 4
+Zm00001d051529	Zm00001eb187910	4CL	4CL5	4-coumarate--CoA ligase 
+Zm00001d051870	Zm00001eb190920	COMT	ZmNANMT1	O-methyltransferase family protein
+Zm00001d051938	Zm00001eb191610	CCR	CCR1	Cinnamoyl-CoA reductase 1
+Zm00001d052841	Zm00001eb199470	CCoAOMT	ZmOMT4	Phosphatidylinositol/phosphatidylcholine transfer protein SFH13
+Zm00001d052842	Zm00001eb199490	CCoAOMT	CCoAOMT1d	Caffeoyl-CoA O-methyltransferase 1
+Zm00001d053619	Zm00001eb205530	PAL	ZmPAL1	Phenylalanine ammonia-lyase 1

@@ -1,12 +1,12 @@
 library(Ropt)
 library(data.table)
 ##trait per se
-sig=fread("TWAS_sig_V4.txt", header=T,data.table=F)
+sig=fread("inputdata/fig5/TWAS_sig_V4.txt", header=T,data.table=F)
 sig1=sig[sig[,12]!=0,]
 m=sig[sig[,1]=="Hybrid",]
 m=m[m[,2]%in%sig1[,2],]
-ch=fread("chrom.txt", header=T,data.table=F)
-tr=fread("traits.txt", header=F,data.table=F)
+ch=fread("inputdata/fig5/chrom.txt", header=T,data.table=F)
+tr=fread("inputdata/fig5/traits.txt", header=F,data.table=F)
 col=colours()[c(258,53,96,32,145,28,43)]
 col=adjustcolor(col,alpha.f = 0.6)
 res=NULL
@@ -14,7 +14,7 @@ sig=NULL
 for(i in 1:nrow(tr))
 {
   tra=tr[i,1]
-  inf=qq("GAPIT.Association.GWAS_Results.CMLM.{tra}.csv")
+  inf=qq("inputdata/fig5/GAPIT.Association.GWAS_Results.CMLM.{tra}.csv")
   d=fread(inf, header=T,data.table=F)[,c(2:4,1)]
   ##############
 d1=NULL
@@ -58,12 +58,12 @@ d6=d5[d5[,5]=="Zm00001d026147",]
 write.table(d5,"TWAS_sig_exp_trait_per_se_add_gene.txt",quote=F,sep="\t",row.names=F,col.names=T)
 
 ###trait heterosis
-sig=fread("TWAS_sig_V4.txt", header=T,data.table=F)
+sig=fread("inputdata/fig5/TWAS_sig_V4.txt", header=T,data.table=F)
 sig1=sig[sig[,12]!=0,]
 m=sig[sig[,1]=="MPH",]
 m=m[m[,2]%in%sig1[,2],]
-ch=fread("chrom.txt", header=T,data.table=F)
-tr=fread("traits.txt", header=F,data.table=F)
+ch=fread("inputdata/fig5/chrom.txt", header=T,data.table=F)
+tr=fread("inputdata/fig5/traits.txt", header=F,data.table=F)
 col=colours()[c(258,53,96,32,145,28,43)]
 col=adjustcolor(col,alpha.f = 0.6)
 res=NULL
@@ -71,7 +71,7 @@ sig=NULL
 for(i in 1:nrow(tr))
 {
   tra=tr[i,1]
-  inf=qq("GAPIT.Association.GWAS_Results.CMLM.{tra}.csv")
+  inf=qq("inputdata/fig5/GAPIT.Association.GWAS_Results.CMLM.{tra}.csv")
   d=fread(inf, header=T,data.table=F)[,c(2:4,1)]
   ##############
 d1=NULL
@@ -114,8 +114,8 @@ dev.off()
 write.table(d5,"TWAS_sig_exp_trait_MPH_add_gene.txt",quote=F,sep="\t",row.names=F,col.names=T)
 
 ##plot LUC signals
-g=fread("candidate_genes.txt", header=T,data.table=F)[,1]
-d0=fread("LUC_res.txt", header=T,data.table=F)
+g=fread("inputdata/fig5/candidate_genes.txt", header=T,data.table=F)[,1]
+d0=fread("inputdata/fig5/LUC_res.txt", header=T,data.table=F)
 d=d0[grep("/",d0[,2]),]
 re=NULL
 for(i in g)

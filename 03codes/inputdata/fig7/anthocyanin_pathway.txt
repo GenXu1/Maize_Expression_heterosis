@@ -1,0 +1,50 @@
+Name	Gene	Chr	Start	End	Strand	description
+R1	Zm00001d026147	10	139780968	139790276	+	"P;plant color component at R1: anthocyanin pigmentation in seedling leaf tip, coleoptile, anthers"
+b1	Zm00001d000236	B73V4_ctg44	#N/A	#N/A	#N/A	b1;colored plant1: dominant B1 plants have anthocyanin in major plant tissues; some alleles affect aleurone and embryo color; regulates flavonoid enzymes; SSR umc1776
+C1	Zm00001d044975	9	8983448	8984721	+	Anthocyanin regulatory C1 protein
+PL1	Zm00001d037118	6	112978409	112979673	+	Anthocyanin biosynthesis regulatory protein Pl1_B73%3B Purple plant1
+Bz1	Zm00001d045055	9	11218973	11220493	-	Anthocyanidin 3-O-glucosyltransferase
+Bz2	Zm00001d032969	1	245012635	245014564	-	Probable glutathione S-transferase BZ2
+A1	Zm00001d044122	3	219867858	219869656	-	Dihydroflavonol-4-reductase
+A2	Zm00001d014914	5	68025894	68027081	+	Leucoanthocyanidin dioxygenase
+A4	Zm00001d011438	8	150482983	150484456	+	Dihydroflavonol-4-reductase
+Chi	Zm00001d034635	1	298580972	298582430	-	"chi1;chalcone flavanone isomerase1: genomic sequence, gene-specific probe, transcript defined by S1-nuclease protection analysis"
+Pr1	Zm00001d017077	5	184494219	184496209	-	pr1;red aleurone1: changes purple aleurone to red; encodes flavonoid 3'-hydroxylase
+Fht1	Zm00001d001960 	2	3559183	3560951	#N/A	flavanone 3-hydroxylase
+P1	Zm00001d028850	1	48576539	48577961	-	Transcription factor MYB12
+pal1	Zm00001d017274	5	191418711	191422345	-	Phenylalanine ammonia-lyase
+pal2	Zm00001d003016	2	29538173	29541434	+	pal2;phenylalanine ammonia lyase2:
+pal3	Zm00001d051161	4	146706971	146710589	-	pal3;phenylalanine ammonia lyase3: used primers on cDNA from glume bars to PCR out RFLP probe. 190 bp ss-mRNA with homology to phenylalanine ammonia lyase. Mapped minor band to this site.
+pal4	Zm00001d051166	4	146846109	146848259	+	pal4;phenylalanine ammonia lyase4:
+pal5	Zm00001d051163	4	146793740	146798809	-	pal5;phenylalanine ammonia lyase5:
+pal10	Zm00001d029015	1	54941440	54943661	+	Phenylalanine ammonia-lyase 1
+pal11	Zm00001d033286	1	257622515	257624760	+	Phenylalanine ammonia-lyase 1
+4CL1	Zm00001d032103	1	213126776	213129233	+	4-coumarate--CoA ligase 1
+4CL3	Zm00001d050224	4	74614191	74625017	+	4-coumarate--CoA ligase 1
+DFR	Zm00001d015513	5	94710366	94713355	+	Dihydroflavonol-4-reductase
+ZmPAC1	Zm00001d017617	5	201803815	201807716	-	Mitochondrial import inner membrane translocase subunit TIM13
+f3h	Zm00001d001960	2	3559183	3560951	+	Naringenin2-oxoglutarate 3-dioxygenase
+F3'5'H	Zm00001d047424	9	129619898	129624238	-	Flavonoid 3'-monooxygenase
+F3H	Zm00001d029218	1	62747068	62748525	-	Protein SRG1
+ZmFLS1	Zm00001d018183	5	215965775	215970551	-	mpt1;mitochondrial phosphate transporter1: cDNA sequence
+ZmANR1	Zm00001d026369	10	144444247	144447064	+	Anthocyanidin reductase
+ufgt2	Zm00001d019256	7	24211071	24212860	+	UDP-glycosyltransferase 76C1
+ufgt4	Zm00001d052492	4	191250808	191252184	+	Anthocyanidin 3-O-glucoside 2'''-O-xylosyltransferase
+ZmCHS05	Zm00001d040479	3	46076165	46080173	+	Type III polyketide synthase B
+chi4	Zm00001d018278	5	217822234	217826421	+	Fatty-acid-binding protein 2
+ZmCHS11	Zm00001d019478	7	35957502	35959139	+	Type III polyketide synthase B
+ZmCHS10	Zm00001d052916	4	204719770	204725360	-	Chalcone synthase 8
+CHS13	Zm00001d013991	5	27692922	27694559	-	Type III polyketide synthase A
+ZmCHS12	Zm00001d040483	3	46196702	46197595	-	Type III polyketide synthase B
+ZmCHS14	Zm00001d032662	1	233440839	233442623	-	Type III polyketide synthase A
+CHS03	Zm00001d021562	7	156106423	156108285	-	Type III polyketide synthase B
+drts1	Zm00001d050448	4	89034532	89036502	-	Bifunctional dihydrofolate reductase-thymidylate synthase 2
+drts2	Zm00001d030396	1	129217168	129219137	-	Bifunctional dihydrofolate reductase-thymidylate synthase 2
+drts3	Zm00001d007318	2	228269951	228282379	+	Bifunctional dihydrofolate reductase-thymidylate synthase Dihydrofolate reductase Thymidylate synthase
+chi5	Zm00001d016144	5	146540230	146555384	-	Chalcone isomerase 3
+chi6	Zm00001d044683	3	234824366	234825497	+	Probable chalcone--flavonone isomerase 3
+C2	Zm00001d052673	4	196893203	196896534	+	Chalcone synthase C2
+AAT1	Zm00001d034925	1	305698918	305700369	-	Transferase
+Rif1	Zm00001d019922 	7	76564755	76573638		r-interacting factor1
+cyp46	Zm00001d038555					
+pal9	Zm00001d017275					
