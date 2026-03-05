@@ -5,9 +5,11 @@ library(basicTrendline)
 library(ggpointdensity)
 library(ggplot2)
 library(ggpubr)
+library(cowplot)
+library(grid)
 #######plot genetic load vs gene expression
-d0=fread("211inbreds.gene.up5k.load.txt", header=T,data.table=F)
-d=fread("all_Gene_inb_expression_med_mean.txt", header=T,data.table=F)
+d0=fread("inputdata/fig2/211inbreds.gene.up5k.load.txt", header=T,data.table=F)
+d=fread("inputdata/fig2/all_Gene_inb_expression_med_mean.txt", header=T,data.table=F)
 d=na.omit(d)
 d1=d[d[,2]>=1,]
 d2=merge(d0,d1,by="Gene")
@@ -24,11 +26,7 @@ median_by_group <- aggregate(d2[, 2], by = list(Group = d2$group), FUN = median,
 colnames(median_by_group)[2] <- "Median"
 median_by_group$id=gsub("t", "", median_by_group$Group)
 median_by_group$id=as.numeric(median_by_group$id)
-library(Ropt)
-library(data.table)
-library(ggpointdensity)
-library(ggplot2)
-library(ggpubr)
+
 p1 <- ggplot(median_by_group, aes(x = id, y = Median)) +
   geom_point(color = "darkgreen", alpha = 0.6, size = 1) +  # 使用透明蓝色点
   stat_smooth(method = "lm",
@@ -48,94 +46,43 @@ par(mfrow=c(1,1),mar=c(4,4,2,2))
 p1
 dev.off()
 
-####heritability and evolvability for genes of different levels of heterosis 
-d1=fread("Hyb_gene_expression_CV.txt", header=T,data.table=F)
-d2=fread("RNA_hyb_SNP_based_heritability.txt", header=T,data.table=F)
-d2=d2[,c(1,4)]
-colnames(d2)=c("Gene","heritability")
-d3=fread("MPH_gene_summary_Gen_06_19_2025.txt", header=T,data.table=F)
-d3=d3[d3[,7]!="additive",]
-d3=d3[,1:2]
-colnames(d3)=c("Gene","MPH")
-d4=merge(d1,d2,by="Gene")
-d5=merge(d4,d3,by="Gene")
-d5[, 4]=abs(d5[, 4])
-# 计算 5% 间隔的分位数作为分组断点（共21个）
-breaks <- quantile(d5[, 3], probs = seq(0, 1, by = 0.005), na.rm = TRUE)
-
-# 创建标签 t1 到 t20
-labels <- paste0("t", 1:200)
-d5=d5[order(d5[,3]),]
-# 对第3列进行分组，并添加到新列 d2$group 中
-library(ggpubr)
-library(cowplot)
-library(grid)
-
-p1 <- ggplot(d5, aes(x = heritability, y = MPH)) +
-  geom_point(color = "darkgreen", alpha = 0.6, size = 1) +  # 使用透明蓝色点
-  stat_smooth(method = "lm",
-              formula = y ~ x,
-              se = T,
-              color = "red",
-              size = 1,
-              linetype = "dashed") +
-  labs(x = "h2_SNP", y = "|MPH|") +
+###plot expression CV and expression |DMP|
+d1=fread("inputdata/fig2/Hyb_gene_expression_CV.txt", header=T,data.table=F)
+d2=fread("inputdata/fig2/MPH_gene_summary_Gen_06_19_2025.txt", header=T,data.table=F)[,c(1,2)]
+colnames(d2)=c("Gene","MPH")
+d3=merge(d1,d2,by="Gene")
+d3[,3]=abs(d3[,3])
+p1 <- ggplot(d3, aes(x =CV,  y = MPH)) +
+  geom_pointdensity(method = "neighbors",size=0.7) +
+  scale_color_viridis_c() +
+  stat_smooth(method = "lm", 
+              formula = y ~ x, 
+              se = FALSE, 
+              color = "red", 
+              size = 1, 
+              linetype = "dashed")  +
+  labs(x = "Coefficient of variation", y = "|DMP|") +
   theme_classic() +
-  theme(legend.position = "none",
-        axis.text = element_text(size = 14, color = "black"),
-        axis.title = element_text(size = 16, face = "bold"))    # 坐标轴标题字体大小
-cor.test(d5$heritability, d5$MPH)
+  theme(legend.position = "none") +
+  theme(
+    axis.text = element_text(size = 14, color = "black"),       # 坐标轴刻度字体大小
+    axis.title = element_text(size = 16, face = "bold")) 
+p1
 
-d=fread("all_Gene_hyb_expression_med_mean.txt", header=T,data.table=F)
-d=na.omit(d)
-d1=d[d[,2]>=1,]
-d2=fread("RNA_hyb_SNP_based_heritability.txt", header=T,data.table=F)
-d2=d2[,c(1,2)]
-colnames(d2)=c("Gene","heritability")
-d3=fread("MPH_gene_summary_Gen_06_19_2025.txt", header=T,data.table=F)[,c(1,2)]
-colnames(d3)=c("Gene","MPH")
-d4=merge(d1,d2,by="Gene")
-d5=merge(d4,d3,by="Gene")
-d5=d5[,-3]
-d5[, 4]=abs(d5[, 4])
-# 计算 5% 间隔的分位数作为分组断点（共21个）
-breaks <- quantile(d5[, 4], probs = seq(0, 1, by = 0.005), na.rm = TRUE)
-
-# 创建标签 t1 到 t20
-labels <- paste0("t", 1:200)
-
-d5$group <- cut(d5[, 4], breaks = breaks, include.lowest = TRUE, labels = labels)
-d5=d5[order(d5$group),]
-d5[,2]=log2(d5[,2]+1)
-re=NULL
-for(i in unique(d5$group)) 
-{
-  d6=d5[d5$group==i,]
-  r=cor.test(d6$heritability,d6$Median_FPKM)$estimate
-  r=round(r,2)
-  a=c(i,r)
-  re=rbind(re,a)
-}
-
-##plot MPH rank and log2exp vs h2 cor
-re=as.data.frame(re)
-re$MPH_rank <- seq(1, nrow(re), by = 1)
-re[,3]=as.numeric(re[,3])
-re[,2]=as.numeric(re[,2])
-re[,2]=re[,2]^2
-cor.test(re$MPH_rank, re$cor)
-re1=re
-colnames(re1)=c("Group","cor_log2Exp_H2","MPH_rank")
-
-d1=fread("Hyb_gene_expression_CV.txt", header=T,data.table=F)
-d2=fread("RNA_hyb_SNP_based_heritability.txt", header=T,data.table=F)
+d1=fread("inputdata/fig2/Hyb_gene_expression_CV.txt", header=T,data.table=F)
+d2=fread("inputdata/fig2/RNA_hyb_SNP_based_heritability.txt", header=T,data.table=F)
 d2=d2[,c(1,4)]
 colnames(d2)=c("Gene","heritability")
-d3=fread("MPH_ratio_summary_with_p3_Yunhui.txt", header=T,data.table=F)[,c(1,2)]
+d3=fread("inputdata/fig2/MPH_gene_summary_Gen_06_19_2025.txt", header=T,data.table=F)[,c(1,2)]
 colnames(d3)=c("Gene","MPH")
 d4=merge(d1,d2,by="Gene")
 d5=merge(d4,d3,by="Gene")
 d5[, 4]=abs(d5[, 4])
+
+d6=fread("inputdata/fig2/all_Gene_hyb_expression_med_mean.txt", header=T,data.table=F)[,c(1,2)]
+colnames(d6)=c("Gene","Expression")
+d6[,2]=log2(d6[,2]+1) ##log2 transform the expression value
+d5=merge(d5,d6,by="Gene")
 # 计算 5% 间隔的分位数作为分组断点（共21个）
 breaks <- quantile(d5[, 4], probs = seq(0, 1, by = 0.005), na.rm = TRUE)
 
@@ -143,9 +90,6 @@ breaks <- quantile(d5[, 4], probs = seq(0, 1, by = 0.005), na.rm = TRUE)
 labels <- paste0("t", 1:200)
 
 # 对第3列进行分组，并添加到新列 d2$group 中
-library(ggpubr)
-library(cowplot)
-library(grid)
 d5$group <- cut(d5[, 4], breaks = breaks, include.lowest = TRUE, labels = labels)
 d5=d5[order(d5$group),]
 j=1
@@ -155,23 +99,24 @@ for(i in unique(d5$group))
   d6=d5[d5$group==i,]
   r=cor.test(d6$heritability,d6$CV)$estimate
   r=round(r,2)
-  a=c(i,r)
+  
+  r1=cor.test(d6$heritability,d6$Expression)$estimate
+  r1=round(r1,2)
+  
+  a=c(i,r,r1)
   re=rbind(re,a)
 }
-
-##plot MPH rank and CV h2 cor
 re=as.data.frame(re)
-re$MPH_rank <- seq(1, nrow(re), by = 1)
+colnames(re)=c("Group","cor_CV_H2","log2EXP_H2")
+re$MPH_rank=as.numeric(gsub("t","",re$Group))
 re[,3]=as.numeric(re[,3])
 re[,2]=as.numeric(re[,2])
 re[,2]=re[,2]^2
-colnames(re)=c("Group","cor_CV_H2","MPH_rank")
+re[,3]=re[,3]^2
+##plot MPH rank and CV h2 cor
+df=re
 
-df=merge(re1,re,by="Group")
-all(df$MPH_rank.x==df$MPH_rank.y) # 确认MPH_rank一致
-df=df[,-3]
-colnames(df)[4]="MPH_rank"
-colnames(df)[2:3]=c("log2EXP_H2", "CV_H2")
+colnames(df)[2]=c("CV_H2")
 scale_factor <- max(df$CV_H2, na.rm = TRUE) / max(df$log2EXP_H2, na.rm = TRUE)
 
 p1=ggplot(df, aes(x = MPH_rank)) +
@@ -219,32 +164,12 @@ p1
 dev.off()
 
 
-p1 <- ggplot(re, aes(x =MPH_rank,  y = cor)) +
-  geom_point(color = "darkgreen", alpha = 0.6, size = 1) +
-  #scale_color_viridis_c() +
-  stat_smooth(method = "lm", 
-              formula = y ~ x, 
-              se = T, 
-              color = "red", 
-              size = 1, 
-              linetype = "dashed")  +
-  labs(x = "MPH rank", y = "r2 (CV vs. H2)") +
-  theme_classic() +
-  theme(legend.position = "none") +
-  theme(
-    axis.text = element_text(size = 12, color = "black"),       # 坐标轴刻度字体大小
-    axis.title = element_text(size = 12, face = "bold")) 
-pdf("Gene_exp_absMPH_rank_H2_CV_cor_200rank.pdf",height = 4,width = 4.5)
-par(mfrow=c(1,1),mar=c(2,4,1,1))
-p1
-dev.off()
-
 ###plot hub gene and module genes MPH, modules were identified from hybrid expression data
-d1=fread("Gene_in_module.txt",header = T,data.table = F)
+d1=fread("inputdata/fig2/Gene_in_module.txt",header = T,data.table = F)
 d1=na.omit(d1)
 d1[,3]=d1[,3]*100
 
-d2=fread("hub_gene_all_modules.txt",header = T,data.table = F)
+d2=fread("inputdata/fig2/hub_gene_all_modules.txt",header = T,data.table = F)
 d2=na.omit(d2)
 d2[,4]=d2[,4]*100
 
@@ -311,10 +236,10 @@ dev.off()
 x=ID[,x]
 colnames(x)[seq(1,20,by=2)]
 ###plot gene number in each module 
-d1=fread("Gene_in_module.txt",header = T,data.table = F)[,-4]
+d1=fread("inputdata/fig2/Gene_in_module.txt",header = T,data.table = F)[,-4]
 d1=na.omit(d1)
 d1[,3]=d1[,3]*100
-d2=fread("MPH_ratio_summary_with_p3_Yunhui.txt",header = T,data.table = F)[,c(1,7)]
+d2=fread("inputdata/fig2/MPH_gene_summary_Gen_06_19_2025.txt",header = T,data.table = F)[,c(1,7)]
 d3=merge(d1,d2,by="Gene")
 
 re=NULL
@@ -335,7 +260,7 @@ write.table(re1,file="Module_gene_number_from_exp_hyb.txt",col.names = T,row.nam
 
 library(ggplot2)
 library(PieGlyph)
-d1=fread("Module_gene_number_from_exp_hyb.txt",header = T,data.table = F)
+d1=fread("inputdata/fig2/Module_gene_number_from_exp_hyb.txt",header = T,data.table = F)
 d1[,3]=log10(d1[,3])
 d1=d1[order(d1[,2]),]
 d1$id=1:nrow(d1)
