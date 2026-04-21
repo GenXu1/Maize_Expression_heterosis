@@ -93,24 +93,39 @@ mph3=MPH2[MPH2[,2]%in%mph3[,2],]
   dev.off()
 
 ##plot pie 
-inb=fread("inputdata/fig3/RNA_Inbred_GWAS.SIG.Loci.leading_SNP_feature_5k.txt", header=T,data.table=F)
-hyb=fread("inputdata/fig3/RNA_hyb_GWAS.SIG.Loci.leading_SNP_feature_5k.txt", header=T,data.table=F)
-MPH=fread("inputdata/fig3/RNA_MPH_GWAS.SIG.Loci.leading_SNP_feature_5k.txt", header=T,data.table=F)
-inb1=as.data.frame(table(inb[,8]))[c(5,1,3,6,2,4),]
-hyb1=as.data.frame(table(hyb[,8]))[c(5,1,3,6,2,4),]
-MPH1=as.data.frame(table(MPH[,8]))[c(5,1,3,6,2,4),]
+inb=fread("RNA_Inbred_GWAS.SIG.Loci.leading_SNP_feature_5k.txt", header=T,data.table=F)
+hyb=fread("RNA_hyb_GWAS.SIG.Loci.leading_SNP_feature_5k.txt", header=T,data.table=F)
+MPH=fread("RNA_MPH_GWAS.SIG.Loci.leading_SNP_feature_5k.txt", header=T,data.table=F)
+inb$type2=inb$Type
+hyb$type2=hyb$Type
+MPH$type2=MPH$Type
+
+inb[inb[,9]=="Trans" & inb[,2]==inb[,4],9]="Trans1"
+inb[inb[,9]=="Trans" & inb[,2]!=inb[,4],9]="Trans2"
+hyb[hyb[,9]=="Trans" & hyb[,2]==hyb[,4],9]="Trans1"
+hyb[hyb[,9]=="Trans" & hyb[,2]!=hyb[,4],9]="Trans2"
+MPH[MPH[,9]=="Trans" & MPH[,2]==MPH[,4],9]="Trans1"
+MPH[MPH[,9]=="Trans" & MPH[,2]!=MPH[,4],9]="Trans2"
+
+
+inb1=as.data.frame(table(inb[,9]))[c(6,1,3,7,2,4,5),]
+hyb1=as.data.frame(table(hyb[,9]))[c(6,1,3,7,2,4,5),]
+MPH1=as.data.frame(table(MPH[,9]))[c(6,1,3,7,2,4,5),]
+all(inb1[,1]==hyb1[,1]) # check if the order of categories is the same
+all(inb1[,1]==MPH1[,1]) # check if the order of categories is the same
 pc1=round(inb1[,2]*100/sum(inb1[,2]),2)
 lb1=paste(pc1,"%",sep="");names(inb1[,2])=lb1
 pc2=round(hyb1[,2]*100/sum(hyb1[,2]),2)
 lb2=paste(pc2,"%",sep="");names(hyb1[,2])=lb2
 pc3=round(MPH1[,2]*100/sum(MPH1[,2]),2)
 lb3=paste(pc3,"%",sep="");names(MPH1[,2])=lb3
-color=colours()[c(8,19,34,44,82,143)]
+color=c("#1b9e77", "#d95f02", "#7570b3",
+        "#e7298a", "#66a61e", "#E6AB02", "#F2C50C")
 
-pdf("Leading_SNP_feature3.pdf",height = 2.5,width = 8.6)
+pdf("Leading_SNP_feature_1M.pdf",height = 2.5,width = 8.6)
 par(mfrow=c(1,3),mar=c(2,3,2,2))
 pie(inb1[,2],labels = lb1,main="Inbred",radius=1,clockwise =F,col=color,border ="white")
-legend("topleft",c("Up5k","Down5K","Gene Body","Up5k_1M","Down5k_1M","Trans"),pch=15,
+legend("topleft",c("Up5k","Down5K","Gene Body","Up5k_1.5M","Down5k_1.5M","Trans1","Trans2"),pch=15,
        col=color,ncol =6,bty = "n")
 pie(hyb1[,2],labels = lb2,main="Hybrid",radius=0.7,clockwise =F,col=color,border ="white")
 pie(MPH1[,2],labels = lb3,main="MPH",radius=0.4,clockwise =F,col=color,border ="white")
